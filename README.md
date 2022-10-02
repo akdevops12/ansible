@@ -1,1 +1,1 @@
-# Set up ansible with multiple hosts using containers hast your hosts servers
+# Set up ansible with multiple hosts using containers as your hosts servers
