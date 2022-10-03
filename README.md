@@ -83,7 +83,7 @@ Ansible is an open source IT automation tool. It helps in managing configuration
    $ vim /etc/ansible/ansible.cfg
 
   Uncomment the line :
-  # host_key_checking = false
+  #host_key_checking = false
   to 
   host_key_checking = false
 
