@@ -84,7 +84,9 @@ Ansible is an open source IT automation tool. It helps in managing configuration
 
   Uncomment the line :
   #host_key_checking = false
-  to 
+
+  to
+   
   host_key_checking = false
 
   To search a specific line on a file we have to tape in exec mode : 
