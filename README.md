@@ -8,15 +8,19 @@ Ansible is an open source IT automation tool. It helps in managing configuration
 - Create an AWS EC2 instance (Using ubuntu, open a ssh port ( port 22) ) 
 - Conect remotely to this AWS EC2 instance ( you must be in the repository where your aws EC2 key pair is located)
 - Run a command to updating and upgrading linux packages 
+
     $ Sudo apt-get update | sudo apt-get upgrade -y 
 
 - Install docker 
-    $sudo apt-get install docker.io -y
+    
+    $ sudo apt-get install docker.io -y
 
 - Give ubuntu user permission to run a docker command as administrator 
+
     $ sudo usermod -aG docker ubuntu
 
 - log out and log back in for your changes to take efec with the "exit" command and reconnect remotely
+
     $ exit
 
 1.  Download Ansible image in Dockerhub repository (akloud12)
@@ -57,6 +61,7 @@ Ansible is an open source IT automation tool. It helps in managing configuration
             Using to list our configuration files
 
     $ cat /etc/ansible/ansible.cfg
+    
     $ cat /etc/ansible/hosts
 
 5. Clone a ansible repository from github (akdevops12)
