@@ -9,7 +9,7 @@ Conect remotely to this AWS EC2 instance ( you must be in the directory where yo
 
 Run a command to updating and upgrading linux packages
 
-$ Sudo apt-get update | sudo apt-get upgrade -y
+$ sudo apt-get update | sudo apt-get upgrade -y
 
 Install docker
 
@@ -44,7 +44,7 @@ Check to know if the necessary tools (Ansible, git) are installed and also check
 
 Checking Ansible :
 
-$ Ansible --version
+$ ansible --version
 
 Checking git :
 
