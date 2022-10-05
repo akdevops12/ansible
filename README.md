@@ -6,7 +6,7 @@ Ansible is an open source IT automation tool. It helps in managing configuration
 # Prerequisites
 
 - Create an AWS EC2 instance (Using ubuntu, open a ssh port ( port 22) ) 
-- Conect remotely to this AWS EC2 instance ( you must be in the repository where your aws EC2 key pair is located)
+- Conect remotely to this AWS EC2 instance ( you must be in the directory where your aws EC2 key pair is located)
 - Run a command to updating and upgrading linux packages 
 
     $ Sudo apt-get update | sudo apt-get upgrade -y 
@@ -34,17 +34,17 @@ Ansible is an open source IT automation tool. It helps in managing configuration
     $ docker run -itd akloud12/ubuntu-ansible
 
     - We're Using :
-     . d : to Detach the Container
+     . d : Is to run the container in Detach mode, meaning the container runs in the backgrand you get your promt 
      . i : inter-active mode
      . t : terminal
     
-    we have to run this command 5 more times to have ours 7 server.
+    we have to run this command 6 more times to have ours 7 server.
 
 3. Login to your Ansible server 
   
     $ docker exec -it <<ansible_server_container_name>> type_of_shell (bash shell, Korn shell,c shell ) 
 
-4. Make some Checking to know if the necessary tools (Ansible, git) are installed 
+4. Check to know if the necessary tools (Ansible, git) are installed 
     and also checking the configuration files
  
     - Checking Ansible :
@@ -78,7 +78,7 @@ Ansible is an open source IT automation tool. It helps in managing configuration
 
     $ cp hosts /etc/ansible/
 
-8. Modify the configuration file ( /etc/ansible/ansible.cfg) to reach all the ansible agents.
+8. Disable Host Key Checking in the configuration file by removing the (#).
 
    $ vim /etc/ansible/ansible.cfg
 
@@ -89,8 +89,8 @@ Ansible is an open source IT automation tool. It helps in managing configuration
    
   host_key_checking = false
 
-  To search a specific line on a file we have to tape in exec mode : 
-  / follow by the word that you are looking for.
+  To search a specific line  of a file in vi, we can go to exec mode,
+  Then type / follow by the word that you are looking for.
 
   for example : look for "host_key_checking"
 
@@ -100,6 +100,6 @@ Ansible is an open source IT automation tool. It helps in managing configuration
 
     $ ansible all -m ping
 
-    . all : for all 
-    . m : module to specify a module. In this case the module is ping
-    . ping : type of module use to test a connectivity.
+    . all : is to attach all of your target servers 
+    . m : is for module. In this case the module is ping
+    . ping : type of module use to test a connectivity between your ansible server and your target servers.
