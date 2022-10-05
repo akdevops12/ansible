@@ -1,8 +1,13 @@
-<VirtualHost *:{{ http_port }}>
-    ServerAdmin webmaster@localhost
-    ServerName {{ http_host }}
-    ServerAlias www.{{ http_host }}
-    DocumentRoot /var/www/{{ http_host }}
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server ipv6only=on;
+
+        root /usr/share/nginx/html;
+        index index.html index.htm;
+
+        server_name localhost;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
