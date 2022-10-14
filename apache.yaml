@@ -1,6 +1,6 @@
 ---
 - 
-  hosts: "172.31.16.54"
+  hosts: all
   become: true
   tasks:
 
