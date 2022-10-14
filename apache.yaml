@@ -1,0 +1,15 @@
+---
+- 
+  hosts: "172.31.16.54"
+  become: true
+  tasks:
+
+    - name: "For install apache server"
+      apt:
+        update_cache: yes
+        upgrade: yes
+
+    - name: "install apache"
+      apt:
+        name: apache2
+        state: present
